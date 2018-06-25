@@ -1,2 +1,2 @@
-# fullstack-boilerplate
+# Fullstack Boilerplate
 First Solo Project
