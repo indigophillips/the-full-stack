@@ -1,11 +1,9 @@
-# Fullstack Boilerplate
+# The Fullstack
 
-First Solo Project
+Steps:
 
-Steps
-Design a database
-Create API Routes
-Build
-db.js with the routes
+1 Design a database
+2 Create API Routes
+3 Build db.js with the routes
 
 
