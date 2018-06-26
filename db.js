@@ -4,8 +4,10 @@ const db = knex(config)
 
 module.exports = {
   getSong,
-  addSong
-
+  getSongs,
+  createSong,
+  updateSong,
+  deleteSong
 }
 
 const songs = [{
@@ -38,10 +40,30 @@ const songs = [{
   inStock: 3
 }]
 
-function getSong () {
-  return songs
+function getSong (song = knex) {
+  const db = knex
+  return db('songs')
 }
 
-function addSong () {
-  return db('song')
+function getSongs (song = knex) {
+  const db = knex
+  return db('songs').select()
+}
+
+function createSong (newSong) {
+  const db = knex
+  return db('songs').insert(newSong)
+}
+
+function updateSong (updatedSong) {
+  const db = knex
+  return db('songs')
+    .where('id', updatedSong.id)
+    .update(updatedSong)
+}
+function deleteSong (id) {
+  const db = knex
+  return db('songs')
+    .where('id', id)
+    .del()
 }

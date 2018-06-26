@@ -8,9 +8,9 @@ class App extends React.Component {
     }
   }
   component () {
-    getAllSongs()
-      .then(songs => {
-        this.setState({songs})
+    getSong()
+      .then(song => {
+        this.setState({song})
       })
   }
 
